@@ -20,6 +20,8 @@ template<class T>
 			void removeAt(int);
 			T first();
 			T single();
+			T last();
+			T singleOrDefault(T);
 	};
 
 template<class T>
