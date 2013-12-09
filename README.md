@@ -1,9 +1,9 @@
 cpplist
 =======
 
-This is a classic link list project.  I really hate the lack of list like abilities in standard C++ so i wrote my own.
+This is a classic link list project.  I really hate the lack of list like abilities in standard C++ so I wrote my own.
 
-This project hides the node class and you never have to interact with it if you dont want to. Some list projects return the entire node rather than the value of the node. I feel this is cumbersome so I just return the value; 
+This project hides the node class and you never have to interact with it if you dont want to. Some list projects return the entire node rather than the value of the node. I feel this is cumbersome so I just return the value.
 
 This project is starting out with the following functions:
 
