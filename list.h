@@ -18,7 +18,8 @@ template<class T>
 			int getCount();
 			void traverse(void (*f) (T));
 			void removeAt(int);
-			
+			T first();
+			T single();
 	};
 
 template<class T>
@@ -84,6 +85,34 @@ template<class T>
 		return list::count;	
 	}
 
+
+//linq functions ------
+template<class T>
+	T list<T>::first() {
+			return this->head->data;
+	}
+
+template<class T>
+	T list<T>::single() {
+		if(list::count != 1) {
+			throw 1;	
+		}
+		else {
+			return this->first();	
+		}
+	}
+
+template<class T>
+	T list<T>::last() {
+		return this->tail->data;	
+	}
+
+
+
+//end linq functions ----
+
+
+
 template<class T>
 	void list<T>::removeAt(int i) {
 		node<T> * temp = this->head;
@@ -116,3 +145,4 @@ template<class T>
 		}
 		list::count--;
 	}
+

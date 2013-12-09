@@ -12,6 +12,7 @@ int main() {
 	for (int i = 0; i < 10; i++) {
 		cout << i << ": ";
 		l->push(i);
+		cout << l->first() << endl;
 		l->traverse(print);
 		cout << endl;
 	}
@@ -21,7 +22,7 @@ int main() {
 		l->traverse(print);
 		cout << endl;
 	}
-	
+	cout << l->single();
 	l->removeAt(0);
 	
 	cout <<endl << l->getCount() << endl;
