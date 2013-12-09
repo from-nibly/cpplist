@@ -27,13 +27,18 @@ void traverse(void (*f) (T));
 
 void removeAt(int);
   removeAt removes the item at the index given
-  
+
+first()
+	grabs the first item in the list
+last()
+	grabs the last item in the list
+single()
+	grabs the first item in the list if there is more than one item in the list it will throw an exception
+
 TODO:
 I am going to write some C# linq like functions because I love linq.
 
-first()
-last()
-single()
+
 singleOrDefault(default)
 first(predicate)
 last(predicate)
