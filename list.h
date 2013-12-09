@@ -89,7 +89,12 @@ template<class T>
 //linq functions ------
 template<class T>
 	T list<T>::first() {
+		if(list::count) {
+			throw 1;	
+		}
+		else {
 			return this->head->data;
+		}
 	}
 
 template<class T>
@@ -104,10 +109,21 @@ template<class T>
 
 template<class T>
 	T list<T>::last() {
+		if(list::count == 0) {
+			throw 1;
+		}
 		return this->tail->data;	
 	}
 
-
+template<class T>
+	T list<T>::singleOrDefault(T def) {
+		if(list::count != 1) {
+			return def;
+		}
+		else {
+			return this->first();	
+		}
+	}
 
 //end linq functions ----
 

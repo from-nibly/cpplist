@@ -29,17 +29,18 @@ void removeAt(int);
   removeAt removes the item at the index given
 
 first()
-	grabs the first item in the list
+	grabs the first item in the list.  If there are no items in the list it will throw an exception.
 last()
 	grabs the last item in the list
 single()
 	grabs the first item in the list if there is more than one item in the list it will throw an exception
 
+singleOrDefault(default)
+	grabs the first item in the list if there is more than one item in the list it will return default;
+
 TODO:
 I am going to write some C# linq like functions because I love linq.
 
-
-singleOrDefault(default)
 first(predicate)
 last(predicate)
 single(predicate)
