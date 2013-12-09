@@ -29,7 +29,7 @@ void removeAt(int);
   removeAt removes the item at the index given
   
 TODO:
-I am going to write some C+ linq like functions because I love linq.
+I am going to write some C# linq like functions because I love linq.
 
 first()
 last()
