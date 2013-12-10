@@ -67,5 +67,33 @@ int main() {
   cout << endl;
   //end traverse
   
+  //removeAt
+  cout << "removeAt:";
+  l->removeAt(2);
+  l->traverse(print);
+  cout << endl;
+  //end removeAt
+  
+  //first
+  cout << "first:" << l->first() << " ";
+  l->traverse(print);
+  cout << endl;
+  //end first
+  
+  //last
+  cout << "last:" << l->last() << " ";
+  l->traverse(print);
+  cout << endl;
+  //end last
+  
+  //single
+  cout << "single:";
+  try {
+    cout << l->single();
+  }
+  catch {
+   cout << "An error occured."; 
+  }
+  //end single
   
 }
