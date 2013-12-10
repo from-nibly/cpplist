@@ -23,6 +23,7 @@ template<class T>
 			T last();
 			T singleOrDefault(T);
       list<T> * where(bool (*) (T));
+      T first(bool (*) (T));
 	};
 
 template<class T>
@@ -139,6 +140,11 @@ template<class T>
       temp = temp->next;
     }
     return rtn;
+  }
+
+template<class T>
+  T list<T>::first(bool(*pred) (T)) {
+    return this->where(pred)->first();
   }
 
 //end linq functions ----
