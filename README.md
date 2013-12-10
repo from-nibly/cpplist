@@ -38,6 +38,9 @@ single()
 singleOrDefault(default)
 	grabs the first item in the list if there is more than one item in the list it will return default;
 
+where(predicate)
+  grabs all of the items when the predicate passed returns true. must be a  --bool (*) (T)-- function.
+
 TODO:
 I am going to write some C# linq like functions because I love linq.
 
@@ -45,7 +48,7 @@ first(predicate)
 last(predicate)
 single(predicate)
 singleOrDefault(predicate, default)
-where(predicate)
+
 getCount(predicate)
 orderBy(predicate)
 
