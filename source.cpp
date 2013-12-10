@@ -6,6 +6,10 @@ void print(int num) {
 	cout << num;	
 }
 
+bool greaterThan5 (int i) {
+ return i > 5; 
+}
+
 int main() {
 	list<int> * l = new list<int>();
 	
@@ -16,6 +20,11 @@ int main() {
 		l->traverse(print);
 		cout << endl;
 	}
+  
+  list<int> * l2 = l->where(greaterThan5);
+  cout << "where:";
+  l2->traverse(print);
+  cout << endl;
 	
 	for(int i = 0; i < 9; i++) {
 		cout << l->serve() << ": ";

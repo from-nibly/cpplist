@@ -22,6 +22,7 @@ template<class T>
 			T single();
 			T last();
 			T singleOrDefault(T);
+      list<T> * where(bool (*) (T));
 	};
 
 template<class T>
@@ -91,7 +92,7 @@ template<class T>
 //linq functions ------
 template<class T>
 	T list<T>::first() {
-		if(list::count) {
+		if(list::count == 0) {
 			throw 1;	
 		}
 		else {
@@ -126,6 +127,19 @@ template<class T>
 			return this->first();	
 		}
 	}
+
+template<class T>
+  list<T> * list<T>::where(bool (*pred) (T)) {
+    list<T> * rtn = new list<T>();
+    node<T> * temp = this->head;
+    while(temp != NULL) {
+      if(pred(temp->data)) {
+       rtn->append(temp->data); 
+      }
+      temp = temp->next;
+    }
+    return rtn;
+  }
 
 //end linq functions ----
 
