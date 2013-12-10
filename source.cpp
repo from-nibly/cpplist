@@ -94,6 +94,7 @@ int main() {
   catch (int ex) {
    cout << "An error occured."; 
   }
+  cout << endl;
   //end single
   
 }
