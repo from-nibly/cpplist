@@ -123,5 +123,24 @@ int main() {
   cout << endl;
   //end last(predicate)
   
+  //single(predicate)
+  cout << "single(predicate):";
+  try {
+    cout << l->single(greaterThan2) << " ";
+  }
+  catch (int ex) {
+   cout << "An error occured. ";
+  }
+  l->traverse(print);
+  cout << endl;
+  //end single(predicate)
+  
+  //singleOrDefault(predicate)
+  cout << "singleOrDefault(predicate):" << l->singleOrDefault(greaterThan2, 9999) << " ";
+  l->traverse(print);
+  cout << endl;
+  //end singleOrDefault(predicate)
+  
+  
   
 }

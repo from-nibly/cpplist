@@ -39,15 +39,27 @@ singleOrDefault(default)
 	grabs the first item in the list if there is more than one item in the list it will return default;
 
 where(predicate)
-  grabs all of the items when the predicate passed returns true. must be a  --bool (*) (T)-- function.
-
-TODO:
-I am going to write some C# linq like functions because I love linq.
+  grabs all of the items when the predicate passed returns true. must be a --bool (*) (T)-- function.
 
 first(predicate)
+  grabs the first item of the sub list when the predicate passed returns true. Must be a --bool (*) (T)-- function.
+  calls this->where(pred)->first();
+  
 last(predicate)
+  grabs the last item of the sub list when the predicate passed returns true. Must be a --bool (*) (T)-- function.
+  calls this->where(pred)->last();
+  
 single(predicate)
+  grabs the first item of the sub list when the predicate passed returns true and throws an exception when the count of the list is not 1. The predicate must be a --bool (*) (T)-- function.
+  calls this->where(pred)->single();
+  
 singleOrDefault(predicate, default)
+  grabs the first item of the sub list when the predicate passed returns true and returns the default when the count of the list is not 1. The predicate must be a --bool (*) (T)-- function.
+  calls this->where(pred)->single();
+  
+  
+TODO:
+
 getCount(predicate)
 orderBy(predicate)
 at()
@@ -60,3 +72,4 @@ I also need to make some operator overloading
 |  bag type intersection
 &  bag type union
 +  bag type addition
+<< traverse with [ , ] to create stream;

@@ -24,6 +24,9 @@ template<class T>
 			T singleOrDefault(T);
       list<T> * where(bool (*) (T));
       T first(bool (*) (T));
+      T last(bool (*) (T));
+      T single(bool (*) (T));
+      T singleOrDefault(bool (*) (T), T);
 	};
 
 template<class T>
@@ -147,8 +150,22 @@ template<class T>
     return this->where(pred)->first();
   }
 
-//end linq functions ----
+template<class T>
+  T list<T>::last(bool(*pred) (T)) {
+     return this->where(pred)->last(); 
+  }
 
+template<class T>
+  T list<T>::single(bool (*pred) (T)) {
+     return this->where(pred)->single(); 
+  }
+
+template<class T>
+  T list<T>::singleOrDefault(bool (*pred) (T), T def) {
+     return this->where(pred)->singleOrDefault(def); 
+  }
+
+//end linq functions ----
 
 
 template<class T>
