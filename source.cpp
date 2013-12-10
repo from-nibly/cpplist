@@ -10,8 +10,8 @@ void printAndAdd1(int num) {
   cout << num + 1; 
 }
 
-bool greaterThan5 (int i) {
- return i > 5; 
+bool greaterThan2 (int i) {
+ return i > 2; 
 }
 
 int main() {
@@ -96,5 +96,32 @@ int main() {
   }
   cout << endl;
   //end single
+  
+  //singleOrDefault
+  cout << "singleOrDefault:" << l->singleOrDefault(9999) << " ";
+  l->traverse(print);
+  cout << endl;
+  //end singleOrDefault
+  
+  //where
+  cout << "where:";
+  l->where(greaterThan2)->traverse(print);
+  cout << " ";
+  l->traverse(print);
+  cout << endl;
+  //end where
+  
+  //first(predicate)
+  cout << "first(predicate):" << l->first(greaterThan2) << " ";
+  l->traverse(print);
+  cout << endl;
+  //end first(predicate)
+  
+  //last(predicate)
+  cout << "last(predicate):" << l->last(greaterThan2) << " ";
+  l->traverse(print);
+  cout << endl;
+  //end last(predicate)
+  
   
 }
