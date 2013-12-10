@@ -48,7 +48,15 @@ first(predicate)
 last(predicate)
 single(predicate)
 singleOrDefault(predicate, default)
-
 getCount(predicate)
 orderBy(predicate)
+at()
+select()
 
+I also need to make some operator overloading
+
+[] should be the same as at()
+-  bag type difference
+|  bag type intersection
+&  bag type union
++  bag type addition
