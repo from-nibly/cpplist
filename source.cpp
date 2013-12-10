@@ -141,6 +141,16 @@ int main() {
   cout << endl;
   //end singleOrDefault(predicate)
   
+  //getCount(predicate)
+  cout << "getCount(predicate):" << l->getCount(greaterThan2) << " ";
+  l->traverse(print);
+  cout << endl;
+  //end getCount(predicate)
   
+  //at()
+  cout << "at:" << l->at(2) << " ";
+  l->traverse(print);
+  cout << endl;
+  //end at()
   
 }

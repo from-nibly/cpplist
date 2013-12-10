@@ -2,7 +2,6 @@
 #include "node.h"
 using namespace std;
 
-
 template<class T>
 	class list {
 		private:
@@ -27,6 +26,8 @@ template<class T>
       T last(bool (*) (T));
       T single(bool (*) (T));
       T singleOrDefault(bool (*) (T), T);
+      T getCount(bool (*) (T));
+      T at(int i);
 	};
 
 template<class T>
@@ -163,6 +164,33 @@ template<class T>
 template<class T>
   T list<T>::singleOrDefault(bool (*pred) (T), T def) {
      return this->where(pred)->singleOrDefault(def); 
+  }
+
+template<class T>
+  T list<T>::getCount(bool (*pred) (T)) {
+     return this->where(pred)->getCount(); 
+  }
+
+template<class T>
+  T list<T>::at(int i) {
+    if(i >= list<T>::count) {
+       throw 1;
+    }
+    else if(i == 0) {
+       return this->head->data; 
+    }
+    else if(i == list<T>::count - 1) {
+       return this->tail->data; 
+    }
+    else {
+      node<T> * temp = this->head;
+			int pos = 0;
+			while(pos < i) {
+				temp = temp->next;
+				pos++;
+			}
+      return temp->data;
+		}
   }
 
 //end linq functions ----

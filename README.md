@@ -57,10 +57,15 @@ singleOrDefault(predicate, default)
   grabs the first item of the sub list when the predicate passed returns true and returns the default when the count of the list is not 1. The predicate must be a --bool (*) (T)-- function.
   calls this->where(pred)->single();
   
+getCount(predicate)
+  grabs the count of a sub list when the predicate passsed returns true. The predicate must be a --bool (*) (T)-- function.
+  returns this->where(pred)->getCount();
   
+at()
+  grabs the item at the index.  If the index is larger than the count it throws an exception;
+
 TODO:
 
-getCount(predicate)
 orderBy(predicate)
 at()
 select()
