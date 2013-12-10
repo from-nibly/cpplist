@@ -91,7 +91,7 @@ int main() {
   try {
     cout << l->single();
   }
-  catch {
+  catch (int ex) {
    cout << "An error occured."; 
   }
   //end single
